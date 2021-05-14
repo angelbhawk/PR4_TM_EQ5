@@ -16,7 +16,7 @@ namespace PR5_TM_EQ5
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Formulario());
+            Application.Run(new Acceso());
         }
     }
 }

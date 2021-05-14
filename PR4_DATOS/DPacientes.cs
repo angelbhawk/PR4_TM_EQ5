@@ -17,7 +17,10 @@ namespace PR4_DATOS
             using (OleDbConnection conx = new OleDbConnection(Cnx))
             {
                 conx.Open();
-                string sqlquery = "INSERT INTO Paciente(RFC, Nombre, Domicilio, Colonia, Sexo, Enfermedad, Habitación, Tipo de sangre, Color de ojos, Peso, Fecha de ingreso) VALUES (@rfc, @Nom, @Dom, @Col, @Sexo, @Enfer, @Habi, @TipoSan, @ColOjos, @Peso, @FeIngre)";
+                string sqlquery = "INSERT INTO Paciente(RFC,Nombre,Domicilio," +
+                    "Colonia,Sexo,Enfermedad,Habitacion,TipoDeSangre,ColorDeOjos,Peso," +
+                    "FechaDeIngreso) VALUES (@rfc, @Nom, @Dom, @Col, @Sexo, @Enfer, @Habi, " +
+                    "@TipoSan, @ColOjos, @Peso, @FeIngre)";
                 using (OleDbCommand cmd = new OleDbCommand(sqlquery, conx))
                 {
                     cmd.Parameters.AddWithValue("@rfc", Pacien.rfc);
@@ -33,11 +36,11 @@ namespace PR4_DATOS
                     cmd.Parameters.AddWithValue("@FeIngre", Pacien.fechaIngreso);
                     cmd.ExecuteNonQuery();
                     cmd.Dispose();
-
                 }
                 conx.Close();
             }
         }
+
         public List<EPacientes> AllPacientes()
         {
             List<EPacientes> Pacientes = new List<EPacientes>();
@@ -52,19 +55,17 @@ namespace PR4_DATOS
                     {
                         EPacientes Pacien = new EPacientes
                         {
-                            rfc = Convert.ToString(dtr["rfc"]),
+                            rfc = Convert.ToString(dtr["RFC"]),
                             nombre = Convert.ToString(dtr["Nombre"]),
                             domicilio = Convert.ToString(dtr["Domicilio"]),
                             colonia = Convert.ToString(dtr["Colonia"]),
                             sexo = Convert.ToString(dtr["Sexo"]),
                             enfermedad = Convert.ToString(dtr["Enfermedad"]),
-                            habitacion = Convert.ToString(dtr["Habitación"]),
-                            tipoSangre = Convert.ToString(dtr["Tipo de sangre"]),
-                            colorOjos = Convert.ToString(dtr["Color de ojos"]),
+                            habitacion = Convert.ToString(dtr["Habitacion"]),
+                            tipoSangre = Convert.ToString(dtr["TipoDeSangre"]),
+                            colorOjos = Convert.ToString(dtr["ColorDeOjos"]),
                             peso = Convert.ToInt32(dtr["Peso"]),
-                            fechaIngreso = Convert.ToDateTime(dtr["Fecha de ingreso"])
-
-
+                            fechaIngreso = Convert.ToDateTime(dtr["FechaDeIngreso"])
                         };
                         Pacientes.Add(Pacien);
                     }
@@ -74,6 +75,7 @@ namespace PR4_DATOS
             }
             return Pacientes;
         }
+
         public EPacientes GetPacientes(string Rfc)
         {
             using (OleDbConnection conx = new OleDbConnection(Cnx))
@@ -88,17 +90,17 @@ namespace PR4_DATOS
                     {
                         EPacientes Pacien = new EPacientes
                         {
-                            rfc = Convert.ToString(dtr["rfc"]),
+                            rfc = Convert.ToString(dtr["RFC"]),
                             nombre = Convert.ToString(dtr["Nombre"]),
                             domicilio = Convert.ToString(dtr["Domicilio"]),
                             colonia = Convert.ToString(dtr["Colonia"]),
                             sexo = Convert.ToString(dtr["Sexo"]),
                             enfermedad = Convert.ToString(dtr["Enfermedad"]),
-                            habitacion = Convert.ToString(dtr["Habitación"]),
-                            tipoSangre = Convert.ToString(dtr["Tipo de sangre"]),
-                            colorOjos = Convert.ToString(dtr["Color de ojos"]),
+                            habitacion = Convert.ToString(dtr["Habitacion"]),
+                            tipoSangre = Convert.ToString(dtr["TipoDeSangre"]),
+                            colorOjos = Convert.ToString(dtr["ColorDeOjos"]),
                             peso = Convert.ToInt32(dtr["Peso"]),
-                            fechaIngreso = Convert.ToDateTime(dtr["Fecha de ingreso"])
+                            fechaIngreso = Convert.ToDateTime(dtr["FechaDeIngreso"])
                         };
                         return Pacien;
                     }
@@ -108,12 +110,15 @@ namespace PR4_DATOS
             }
             return null;
         }
+
+        //METODO BUSQUEDA POR 
+
         public void UpdatePaciente(EPacientes Pacien)
         {
             using (OleDbConnection conx = new OleDbConnection(Cnx))
             {
                 conx.Open();
-                string sqlquery = "UPDATE Paciente SET Nombre=@Nom, Domicilio=@Dom, Colonia=@Col , Sexo=@sexo, Enfermedad=@Enfer, Habitación=@Habi, Tipo de sangre=@TipoSan, Color de ojos=@ColOjos, Peso=@Peso  WHERE RFC=@rfc";
+                string sqlquery = "UPDATE Paciente SET RFC=@rfc, Nombre=@Nom, Domicilio=@Dom, Colonia=@Col , Sexo=@sexo, Enfermedad=@Enfer, Habitacion=@Habi, TipoDeSangre=@TipoSan, ColorDeOjos=@ColOjos, Peso=@Peso, FechaDeIngreso=@FeIngre  WHERE RFC=@rfc";
                 using (OleDbCommand cmd = new OleDbCommand(sqlquery, conx))
                 {
                     cmd.Parameters.AddWithValue("@rfc", Pacien.rfc);
@@ -130,9 +135,10 @@ namespace PR4_DATOS
                     cmd.ExecuteNonQuery();
                     cmd.Dispose();
                 }
-                conx.Dispose();
+                conx.Close();
             }
         }
+
         public void EliminarPaciente(string Rfc)
         {
             using (OleDbConnection conx = new OleDbConnection(Cnx))
@@ -144,7 +150,6 @@ namespace PR4_DATOS
                     cmd.Parameters.AddWithValue("@rfc", Rfc);
                     cmd.ExecuteNonQuery();
                     cmd.Dispose();
-
                 }
                 conx.Dispose();
             }

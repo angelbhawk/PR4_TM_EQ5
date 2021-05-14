@@ -12,6 +12,7 @@ namespace PR4_LOGICA
     {
         private DPacientes PacienDatos = new DPacientes();
         public readonly StringBuilder Mensaje = new StringBuilder();
+
         private bool ValidarPaciente(EPacientes Pacien)
         {
             Mensaje.Clear();
@@ -28,12 +29,13 @@ namespace PR4_LOGICA
             {
                 Mensaje.Append(Environment.NewLine + "El campo Peso es debe ser mayor a cero y obligatorio");
             }
-            if (Pacien.tipoSangre.Length >= 4 || Pacien.tipoSangre.Length <=0) 
+            if (Pacien.tipoSangre.Length > 4 || Pacien.tipoSangre.Length <=0) 
             {
                 Mensaje.Append(Environment.NewLine + "El campo tipo de sangre no puede dejarse en blanco o contener más de 4 caracteres");
             }
             return Mensaje.Length == 0;
         }
+
         public void RegistrarPaciente(EPacientes Pacien)
         {
             Mensaje.Clear();
@@ -49,10 +51,12 @@ namespace PR4_LOGICA
                 }
             }
         }
+
         public List<EPacientes> ListaPacientes()
         {
             return PacienDatos.AllPacientes();
         }
+
         public EPacientes ObtenerPacientes(string RFC)
         {
             Mensaje.Clear();
@@ -67,6 +71,7 @@ namespace PR4_LOGICA
             }
             return null;
         }
+
         public void EliminarPaciente(string RFC)
         {
             Mensaje.Clear();
@@ -79,6 +84,7 @@ namespace PR4_LOGICA
                 PacienDatos.EliminarPaciente(RFC);
             }
         }
+
         public void ModificarAlumnos(EPacientes Pacien)
         {
             if (ValidarPaciente(Pacien))
