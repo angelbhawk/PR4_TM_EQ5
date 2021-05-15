@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PR5_TM_EQ5.Forms;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace PR5_TM_EQ5
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Acceso());
+            Application.Run(new FPrincipal());
         }
     }
 }
