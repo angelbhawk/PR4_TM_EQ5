@@ -29,7 +29,7 @@ namespace PR4_LOGICA
             {
                 Mensaje.Append(Environment.NewLine + "El campo Peso es debe ser mayor a cero y obligatorio");
             }
-            if (Pacien.tipoSangre.Length > 4 || Pacien.tipoSangre.Length <=0) 
+            if (Pacien.tipoSangre.Length > 5 || Pacien.tipoSangre.Length <=0) 
             {
                 Mensaje.Append(Environment.NewLine + "El campo tipo de sangre no puede dejarse en blanco o contener más de 4 caracteres");
             }

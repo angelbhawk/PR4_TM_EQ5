@@ -58,6 +58,15 @@ namespace PR5_TM_EQ5.Forms
             }
         }
 
+        public void Modificar_Paciente(string srfc)
+        {
+            Clear();
+            Open_FPP();
+            myFPP.lblTipo.Text = "Modificación de " + srfc;
+            myFPP.Srfc = srfc;
+            myFPP.BuscarPaciente();
+        }
+
         private void Open_FCG() 
         {
             myFCG = new FCGeneral();
