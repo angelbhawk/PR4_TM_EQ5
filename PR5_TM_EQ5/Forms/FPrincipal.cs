@@ -58,6 +58,7 @@ namespace PR5_TM_EQ5.Forms
             {
                 Open_FCG();
                 myFCG.ConsultasEspecificas(name);
+                //myFCG.ConsultaIndividual(name);
             }
         }
 

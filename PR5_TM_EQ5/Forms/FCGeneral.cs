@@ -18,6 +18,7 @@ namespace PR5_TM_EQ5.Forms
         private EPacientes Pacientes;
         private readonly LPacientes LogPacientes = new LPacientes();
         private FPrincipal gate;
+        public string Cate;
 
         public FCGeneral()
         {
@@ -66,6 +67,7 @@ namespace PR5_TM_EQ5.Forms
             }
             else
             {
+                Cate = atributo;
                 lblTipo.Text = atributo;
                 cbxOpciones.Items.Clear();
 
@@ -209,11 +211,96 @@ namespace PR5_TM_EQ5.Forms
 
             }
         }
-        private void button1_Click(object sender, EventArgs e)
+        public void ConsultaIndividual(string Categoria)
         {
             string Busqueda = cbxOpciones.Text;
+            ConsultaGeneral();
+            int ren = 0;
+            List<EPacientes> ListPaciente = LogPacientes.ListaPacientes();
+            switch (Categoria)
+            {
+                case "Por colonia":
+                    int a = 0;
+                    if (DgvDatos.RowCount > 0)
+                    {
+                        for (int i=0; i<DgvDatos.RowCount;i++)
+                        {
+                            if (Convert.ToString(DgvDatos[3, i].Value) == Busqueda)
+                            {
+                                DgvDatos[3, a].Value = DgvDatos[3, i].Value;
+                                DgvDatos[0, a].Value = DgvDatos[0, i].Value;
+                                DgvDatos[1, a].Value = DgvDatos[1, i].Value;
+                                DgvDatos[2, a].Value = DgvDatos[2, i].Value;
+                                DgvDatos[4, a].Value = DgvDatos[4, i].Value;
+                                DgvDatos[5, a].Value = DgvDatos[5, i].Value;
+                                DgvDatos[6, a].Value = DgvDatos[6, i].Value;
+                                DgvDatos[7, a].Value = DgvDatos[7, i].Value;
+                                DgvDatos[8, a].Value = DgvDatos[8, i].Value;
+                                DgvDatos[9, a].Value = DgvDatos[9, i].Value;
+                                DgvDatos[10, a].Value = DgvDatos[10, i].Value;
+                                a++;
+                            }
+                            //DgvDatos[]
+                            
+                        }
+                    }
+                    else
+                        MessageBox.Show("No hay pacientes registrados actualente");
+                    break;
 
+                case "Por sexo":
+        
+                    break;
 
+                case "Por enfermedad":
+
+                    break;
+
+                case "Por tipo de sangre":
+
+                    break;
+
+                case "Por color de ojos":
+
+                    break;
+
+                case "Por peso":
+
+                   
+                    break;
+
+                default:
+
+                    break;
+            }
+            /*
+            if (ListPaciente.Count > 0)
+            {
+                DgvDatos.RowCount = ListPaciente.Count;
+                foreach (EPacientes Pa in ListPaciente)
+                {
+                    DgvDatos[0, ren].Value = Pa.rfc;
+                    DgvDatos[1, ren].Value = Pa.nombre;
+                    DgvDatos[2, ren].Value = Pa.domicilio;
+                    DgvDatos[3, ren].Value = Pa.colonia;
+                    DgvDatos[4, ren].Value = Pa.sexo;
+                    DgvDatos[5, ren].Value = Pa.enfermedad;
+                    DgvDatos[6, ren].Value = Pa.habitacion;
+                    DgvDatos[7, ren].Value = Pa.tipoSangre;
+                    DgvDatos[8, ren].Value = Pa.colorOjos;
+                    DgvDatos[9, ren].Value = Pa.peso;
+                    DgvDatos[10, ren].Value = Pa.fechaIngreso;
+                    ren++;
+                }
+            }
+            else
+                MessageBox.Show("No hay pacientes registrados actualente");
+            */
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ConsultaIndividual(Cate);
         }
     }
 }

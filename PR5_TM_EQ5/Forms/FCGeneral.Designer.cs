@@ -29,14 +29,14 @@ namespace PR5_TM_EQ5.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle113 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle120 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle114 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle115 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle116 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle117 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle118 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle119 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DgvDatos = new System.Windows.Forms.DataGridView();
             this.cRFC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,14 +71,14 @@ namespace PR5_TM_EQ5.Forms
             this.DgvDatos.BackgroundColor = System.Drawing.Color.White;
             this.DgvDatos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DgvDatos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
-            dataGridViewCellStyle41.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle41.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle41.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
-            dataGridViewCellStyle41.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle41.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle41;
+            dataGridViewCellStyle113.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle113.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
+            dataGridViewCellStyle113.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle113.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle113.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
+            dataGridViewCellStyle113.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle113.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle113;
             this.DgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cRFC,
@@ -94,14 +94,14 @@ namespace PR5_TM_EQ5.Forms
             this.cfIngreso,
             this.cEliminar,
             this.cModificar});
-            dataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle48.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle48.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle48.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle48.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle48.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle48.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgvDatos.DefaultCellStyle = dataGridViewCellStyle48;
+            dataGridViewCellStyle120.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle120.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle120.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle120.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle120.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle120.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle120.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgvDatos.DefaultCellStyle = dataGridViewCellStyle120;
             this.DgvDatos.EnableHeadersVisualStyles = false;
             this.DgvDatos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.DgvDatos.Location = new System.Drawing.Point(16, 84);
@@ -119,8 +119,8 @@ namespace PR5_TM_EQ5.Forms
             // cRFC
             // 
             this.cRFC.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
-            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.cRFC.DefaultCellStyle = dataGridViewCellStyle42;
+            dataGridViewCellStyle114.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.cRFC.DefaultCellStyle = dataGridViewCellStyle114;
             this.cRFC.HeaderText = "RFC";
             this.cRFC.MinimumWidth = 6;
             this.cRFC.Name = "cRFC";
@@ -132,8 +132,8 @@ namespace PR5_TM_EQ5.Forms
             // cNombre
             // 
             this.cNombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
-            dataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.cNombre.DefaultCellStyle = dataGridViewCellStyle43;
+            dataGridViewCellStyle115.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.cNombre.DefaultCellStyle = dataGridViewCellStyle115;
             this.cNombre.HeaderText = "Nombre";
             this.cNombre.MinimumWidth = 6;
             this.cNombre.Name = "cNombre";
@@ -144,8 +144,8 @@ namespace PR5_TM_EQ5.Forms
             // 
             // cDomicilio
             // 
-            dataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.cDomicilio.DefaultCellStyle = dataGridViewCellStyle44;
+            dataGridViewCellStyle116.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.cDomicilio.DefaultCellStyle = dataGridViewCellStyle116;
             this.cDomicilio.HeaderText = "Domicilio";
             this.cDomicilio.MinimumWidth = 6;
             this.cDomicilio.Name = "cDomicilio";
@@ -228,8 +228,8 @@ namespace PR5_TM_EQ5.Forms
             // cfIngreso
             // 
             this.cfIngreso.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
-            dataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.cfIngreso.DefaultCellStyle = dataGridViewCellStyle45;
+            dataGridViewCellStyle117.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.cfIngreso.DefaultCellStyle = dataGridViewCellStyle117;
             this.cfIngreso.HeaderText = "Fecha ingreso";
             this.cfIngreso.MinimumWidth = 6;
             this.cfIngreso.Name = "cfIngreso";
@@ -240,10 +240,10 @@ namespace PR5_TM_EQ5.Forms
             // 
             // cEliminar
             // 
-            dataGridViewCellStyle46.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle46.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
-            dataGridViewCellStyle46.ForeColor = System.Drawing.Color.White;
-            this.cEliminar.DefaultCellStyle = dataGridViewCellStyle46;
+            dataGridViewCellStyle118.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle118.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
+            dataGridViewCellStyle118.ForeColor = System.Drawing.Color.White;
+            this.cEliminar.DefaultCellStyle = dataGridViewCellStyle118;
             this.cEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cEliminar.HeaderText = "Eliminar";
             this.cEliminar.MinimumWidth = 6;
@@ -255,10 +255,10 @@ namespace PR5_TM_EQ5.Forms
             // 
             // cModificar
             // 
-            dataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle47.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle47.ForeColor = System.Drawing.Color.White;
-            this.cModificar.DefaultCellStyle = dataGridViewCellStyle47;
+            dataGridViewCellStyle119.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle119.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle119.ForeColor = System.Drawing.Color.White;
+            this.cModificar.DefaultCellStyle = dataGridViewCellStyle119;
             this.cModificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cModificar.HeaderText = "Modificar";
             this.cModificar.MinimumWidth = 6;
@@ -322,6 +322,7 @@ namespace PR5_TM_EQ5.Forms
             this.button1.TabIndex = 6;
             this.button1.Text = "Buscar";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lblTipo
             // 
@@ -355,7 +356,7 @@ namespace PR5_TM_EQ5.Forms
             this.pnlTitulo.Margin = new System.Windows.Forms.Padding(4);
             this.pnlTitulo.Name = "pnlTitulo";
             this.pnlTitulo.Size = new System.Drawing.Size(1168, 52);
-            this.pnlTitulo.TabIndex = 1;
+            this.pnlTitulo.TabIndex = 9;
             // 
             // FCGeneral
             // 
