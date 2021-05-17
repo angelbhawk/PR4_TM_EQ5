@@ -77,6 +77,7 @@ namespace PR5_TM_EQ5.Forms
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label29 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -92,27 +93,27 @@ namespace PR5_TM_EQ5.Forms
             this.panel1.Controls.Add(this.lblTipo);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(509, 42);
+            this.panel1.Size = new System.Drawing.Size(522, 42);
             this.panel1.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(19, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 16);
+            this.label1.Size = new System.Drawing.Size(158, 19);
             this.label1.TabIndex = 2;
             this.label1.Text = "Datos del paciente  /";
             // 
             // lblTipo
             // 
             this.lblTipo.AutoSize = true;
-            this.lblTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.lblTipo.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold);
             this.lblTipo.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblTipo.Location = new System.Drawing.Point(170, 11);
+            this.lblTipo.Location = new System.Drawing.Point(177, 11);
             this.lblTipo.Name = "lblTipo";
-            this.lblTipo.Size = new System.Drawing.Size(136, 16);
+            this.lblTipo.Size = new System.Drawing.Size(143, 19);
             this.lblTipo.TabIndex = 5;
             this.lblTipo.Text = "Registrar paciente";
             // 
@@ -146,7 +147,7 @@ namespace PR5_TM_EQ5.Forms
             // 
             this.cbxColonia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.cbxColonia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbxColonia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.cbxColonia.Font = new System.Drawing.Font("Verdana", 8F);
             this.cbxColonia.FormattingEnabled = true;
             this.cbxColonia.Items.AddRange(new object[] {
             "LOS OLIVOS",
@@ -157,40 +158,40 @@ namespace PR5_TM_EQ5.Forms
             "ESTERITO"});
             this.cbxColonia.Location = new System.Drawing.Point(22, 313);
             this.cbxColonia.Name = "cbxColonia";
-            this.cbxColonia.Size = new System.Drawing.Size(205, 24);
+            this.cbxColonia.Size = new System.Drawing.Size(205, 21);
             this.cbxColonia.TabIndex = 21;
             this.cbxColonia.Text = "LOS OLIVOS";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Verdana", 8F);
             this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(34, 44);
+            this.label15.Location = new System.Drawing.Point(31, 44);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(153, 26);
+            this.label15.Size = new System.Drawing.Size(186, 26);
             this.label15.TabIndex = 10;
-            this.label15.Text = "La información personal de los \r\n        pacientes registrados.\r\n";
+            this.label15.Text = "La información personal de los \r\n      pacientes registrados.\r\n";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.label14.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10F, System.Drawing.FontStyle.Bold);
             this.label14.ForeColor = System.Drawing.Color.DarkGray;
-            this.label14.Location = new System.Drawing.Point(94, 291);
+            this.label14.Location = new System.Drawing.Point(96, 291);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(61, 16);
+            this.label14.Size = new System.Drawing.Size(56, 17);
             this.label14.TabIndex = 9;
             this.label14.Text = "Colonia";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.label6.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label6.Location = new System.Drawing.Point(62, 14);
+            this.label6.Location = new System.Drawing.Point(65, 14);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(131, 16);
+            this.label6.Size = new System.Drawing.Size(119, 17);
             this.label6.TabIndex = 7;
             this.label6.Text = "Datos personales";
             // 
@@ -207,33 +208,33 @@ namespace PR5_TM_EQ5.Forms
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.label4.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.DarkGray;
-            this.label4.Location = new System.Drawing.Point(87, 189);
+            this.label4.Location = new System.Drawing.Point(90, 189);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 16);
+            this.label4.Size = new System.Drawing.Size(68, 17);
             this.label4.TabIndex = 5;
             this.label4.Text = "Domicilio";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.label3.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.DarkGray;
-            this.label3.Location = new System.Drawing.Point(92, 140);
+            this.label3.Location = new System.Drawing.Point(94, 140);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 16);
+            this.label3.Size = new System.Drawing.Size(60, 17);
             this.label3.TabIndex = 4;
             this.label3.Text = "Nombre";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.DarkGray;
             this.label2.Location = new System.Drawing.Point(107, 90);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 16);
+            this.label2.Size = new System.Drawing.Size(34, 17);
             this.label2.TabIndex = 3;
             this.label2.Text = "RFC";
             // 
@@ -241,7 +242,7 @@ namespace PR5_TM_EQ5.Forms
             // 
             this.tbxDomicilio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.tbxDomicilio.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbxDomicilio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.tbxDomicilio.Font = new System.Drawing.Font("Verdana", 8F);
             this.tbxDomicilio.Location = new System.Drawing.Point(22, 212);
             this.tbxDomicilio.MaxLength = 30;
             this.tbxDomicilio.Multiline = true;
@@ -253,7 +254,7 @@ namespace PR5_TM_EQ5.Forms
             // 
             this.tbxNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.tbxNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbxNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.tbxNombre.Font = new System.Drawing.Font("Verdana", 8F);
             this.tbxNombre.Location = new System.Drawing.Point(22, 163);
             this.tbxNombre.MaxLength = 30;
             this.tbxNombre.Multiline = true;
@@ -265,7 +266,7 @@ namespace PR5_TM_EQ5.Forms
             // 
             this.cbxSexo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.cbxSexo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbxSexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.cbxSexo.Font = new System.Drawing.Font("Verdana", 8F);
             this.cbxSexo.FormattingEnabled = true;
             this.cbxSexo.Items.AddRange(new object[] {
             "MASCULINO",
@@ -273,7 +274,7 @@ namespace PR5_TM_EQ5.Forms
             this.cbxSexo.Location = new System.Drawing.Point(22, 362);
             this.cbxSexo.MaxDropDownItems = 2;
             this.cbxSexo.Name = "cbxSexo";
-            this.cbxSexo.Size = new System.Drawing.Size(205, 24);
+            this.cbxSexo.Size = new System.Drawing.Size(205, 21);
             this.cbxSexo.TabIndex = 18;
             this.cbxSexo.Text = "MASCULINO";
             // 
@@ -281,7 +282,7 @@ namespace PR5_TM_EQ5.Forms
             // 
             this.tbxRFC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.tbxRFC.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbxRFC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxRFC.Font = new System.Drawing.Font("Verdana", 8F);
             this.tbxRFC.Location = new System.Drawing.Point(22, 113);
             this.tbxRFC.MaxLength = 13;
             this.tbxRFC.Multiline = true;
@@ -336,11 +337,11 @@ namespace PR5_TM_EQ5.Forms
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.label11.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.DarkGray;
-            this.label11.Location = new System.Drawing.Point(103, 339);
+            this.label11.Location = new System.Drawing.Point(104, 339);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(43, 16);
+            this.label11.Size = new System.Drawing.Size(40, 17);
             this.label11.TabIndex = 3;
             this.label11.Text = "Sexo";
             // 
@@ -358,6 +359,7 @@ namespace PR5_TM_EQ5.Forms
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.label29);
             this.panel3.Controls.Add(this.label16);
             this.panel3.Controls.Add(this.label28);
             this.panel3.Controls.Add(this.dtpFechaIngreso);
@@ -386,11 +388,11 @@ namespace PR5_TM_EQ5.Forms
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.label16.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10F, System.Drawing.FontStyle.Bold);
             this.label16.ForeColor = System.Drawing.Color.DarkGray;
-            this.label16.Location = new System.Drawing.Point(64, 91);
+            this.label16.Location = new System.Drawing.Point(65, 91);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(129, 16);
+            this.label16.Size = new System.Drawing.Size(119, 17);
             this.label16.TabIndex = 28;
             this.label16.Text = "Fecha de ingreso";
             // 
@@ -407,6 +409,7 @@ namespace PR5_TM_EQ5.Forms
             // 
             // dtpFechaIngreso
             // 
+            this.dtpFechaIngreso.Font = new System.Drawing.Font("Verdana", 8F);
             this.dtpFechaIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaIngreso.Location = new System.Drawing.Point(26, 114);
             this.dtpFechaIngreso.MaxDate = new System.DateTime(2021, 5, 17, 0, 0, 0, 0);
@@ -419,11 +422,11 @@ namespace PR5_TM_EQ5.Forms
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.label26.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10F, System.Drawing.FontStyle.Bold);
             this.label26.ForeColor = System.Drawing.Color.DarkGray;
-            this.label26.Location = new System.Drawing.Point(83, 141);
+            this.label26.Location = new System.Drawing.Point(86, 141);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(83, 16);
+            this.label26.Size = new System.Drawing.Size(76, 17);
             this.label26.TabIndex = 25;
             this.label26.Text = "Habitación";
             // 
@@ -442,7 +445,7 @@ namespace PR5_TM_EQ5.Forms
             // 
             this.tbxPeso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.tbxPeso.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbxPeso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.tbxPeso.Font = new System.Drawing.Font("Verdana", 8F);
             this.tbxPeso.Location = new System.Drawing.Point(25, 213);
             this.tbxPeso.MaxLength = 3;
             this.tbxPeso.Multiline = true;
@@ -454,7 +457,7 @@ namespace PR5_TM_EQ5.Forms
             // 
             this.tbxHabitacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.tbxHabitacion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbxHabitacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.tbxHabitacion.Font = new System.Drawing.Font("Verdana", 8F);
             this.tbxHabitacion.Location = new System.Drawing.Point(25, 164);
             this.tbxHabitacion.MaxLength = 3;
             this.tbxHabitacion.Multiline = true;
@@ -466,7 +469,7 @@ namespace PR5_TM_EQ5.Forms
             // 
             this.cbxColorOjos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.cbxColorOjos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbxColorOjos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.cbxColorOjos.Font = new System.Drawing.Font("Verdana", 8F);
             this.cbxColorOjos.FormattingEnabled = true;
             this.cbxColorOjos.Items.AddRange(new object[] {
             "AZUL",
@@ -477,7 +480,7 @@ namespace PR5_TM_EQ5.Forms
             "NEGROS"});
             this.cbxColorOjos.Location = new System.Drawing.Point(25, 362);
             this.cbxColorOjos.Name = "cbxColorOjos";
-            this.cbxColorOjos.Size = new System.Drawing.Size(197, 24);
+            this.cbxColorOjos.Size = new System.Drawing.Size(197, 21);
             this.cbxColorOjos.TabIndex = 21;
             this.cbxColorOjos.Text = "AZUL";
             // 
@@ -485,7 +488,7 @@ namespace PR5_TM_EQ5.Forms
             // 
             this.cbxTipoSangre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.cbxTipoSangre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbxTipoSangre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.cbxTipoSangre.Font = new System.Drawing.Font("Verdana", 8F);
             this.cbxTipoSangre.FormattingEnabled = true;
             this.cbxTipoSangre.Items.AddRange(new object[] {
             "ORH+",
@@ -497,7 +500,7 @@ namespace PR5_TM_EQ5.Forms
             this.cbxTipoSangre.Location = new System.Drawing.Point(21, 312);
             this.cbxTipoSangre.MaxLength = 4;
             this.cbxTipoSangre.Name = "cbxTipoSangre";
-            this.cbxTipoSangre.Size = new System.Drawing.Size(201, 24);
+            this.cbxTipoSangre.Size = new System.Drawing.Size(201, 21);
             this.cbxTipoSangre.TabIndex = 20;
             this.cbxTipoSangre.Text = "ORH+";
             // 
@@ -505,7 +508,7 @@ namespace PR5_TM_EQ5.Forms
             // 
             this.cbxEnfermedad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.cbxEnfermedad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbxEnfermedad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.cbxEnfermedad.Font = new System.Drawing.Font("Verdana", 8F);
             this.cbxEnfermedad.FormattingEnabled = true;
             this.cbxEnfermedad.Items.AddRange(new object[] {
             "DIABETES",
@@ -516,40 +519,40 @@ namespace PR5_TM_EQ5.Forms
             "FRACTURAS"});
             this.cbxEnfermedad.Location = new System.Drawing.Point(21, 263);
             this.cbxEnfermedad.Name = "cbxEnfermedad";
-            this.cbxEnfermedad.Size = new System.Drawing.Size(201, 24);
+            this.cbxEnfermedad.Size = new System.Drawing.Size(201, 21);
             this.cbxEnfermedad.TabIndex = 19;
             this.cbxEnfermedad.Text = "DIABETES";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.label13.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10F, System.Drawing.FontStyle.Bold);
             this.label13.ForeColor = System.Drawing.Color.DarkGray;
-            this.label13.Location = new System.Drawing.Point(102, 190);
+            this.label13.Location = new System.Drawing.Point(105, 190);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(44, 16);
+            this.label13.Size = new System.Drawing.Size(39, 17);
             this.label13.TabIndex = 11;
             this.label13.Text = "Peso";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.label12.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.Color.DarkGray;
-            this.label12.Location = new System.Drawing.Point(74, 340);
+            this.label12.Location = new System.Drawing.Point(77, 340);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(101, 16);
+            this.label12.Size = new System.Drawing.Size(94, 17);
             this.label12.TabIndex = 9;
             this.label12.Text = "Color de ojos";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.label7.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label7.Location = new System.Drawing.Point(71, 14);
+            this.label7.Location = new System.Drawing.Point(76, 14);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(106, 16);
+            this.label7.Size = new System.Drawing.Size(97, 17);
             this.label7.TabIndex = 7;
             this.label7.Text = "Datos clinicos";
             // 
@@ -566,22 +569,22 @@ namespace PR5_TM_EQ5.Forms
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.label9.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.DarkGray;
-            this.label9.Location = new System.Drawing.Point(70, 290);
+            this.label9.Location = new System.Drawing.Point(73, 290);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(114, 16);
+            this.label9.Size = new System.Drawing.Size(103, 17);
             this.label9.TabIndex = 5;
             this.label9.Text = "Tipo de sangre";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.label10.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.DarkGray;
-            this.label10.Location = new System.Drawing.Point(78, 240);
+            this.label10.Location = new System.Drawing.Point(82, 240);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(92, 16);
+            this.label10.Size = new System.Drawing.Size(85, 17);
             this.label10.TabIndex = 4;
             this.label10.Text = "Enfermedad";
             // 
@@ -654,7 +657,7 @@ namespace PR5_TM_EQ5.Forms
             this.btnGuardar.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.btnGuardar.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11F, System.Drawing.FontStyle.Bold);
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.Location = new System.Drawing.Point(6, 6);
             this.btnGuardar.Name = "btnGuardar";
@@ -675,6 +678,17 @@ namespace PR5_TM_EQ5.Forms
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(354, 42);
             this.panel5.TabIndex = 7;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Verdana", 8F);
+            this.label29.ForeColor = System.Drawing.Color.Black;
+            this.label29.Location = new System.Drawing.Point(38, 44);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(172, 26);
+            this.label29.TabIndex = 30;
+            this.label29.Text = "La información clinica de los \r\n    pacientes registrados.\r\n";
             // 
             // FPaciente
             // 
@@ -752,5 +766,6 @@ namespace PR5_TM_EQ5.Forms
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label28;
         public System.Windows.Forms.Label lblTipo;
+        private System.Windows.Forms.Label label29;
     }
 }

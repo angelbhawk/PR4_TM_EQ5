@@ -11,7 +11,7 @@ namespace PR4_DATOS
 {
     public class DPacientes
     {
-        string Cnx = ConfigurationManager.ConnectionStrings["CnxPr4Oldb"].ToString();
+        string Cnx = ConfigurationManager.ConnectionStrings["CnxPort"].ToString();
         public void Insertar(EPacientes Pacien)
         {
             using (OleDbConnection conx = new OleDbConnection(Cnx))

@@ -18,6 +18,7 @@ namespace PR5_TM_EQ5.Forms
         public FPrincipal()
         {
             InitializeComponent();
+            
         }
 
         private void pbxMenu_Click(object sender, EventArgs e)
@@ -26,14 +27,14 @@ namespace PR5_TM_EQ5.Forms
             {
                 pnlLmenu.Location = new Point(-250, 0);
                 pnlCcont.Location = new Point(0, 0);
-                pictureBox1.Location = new Point(853, 0);
+                pictureBox1.Location = new Point(865, 0);
 
             }
             else
             {
                 pnlLmenu.Location = new Point(0, 0);
                 pnlCcont.Location = new Point(250, 0);
-                pictureBox1.Location = new Point(603, 0);
+                pictureBox1.Location = new Point(615, 0);
             }
         }
 
