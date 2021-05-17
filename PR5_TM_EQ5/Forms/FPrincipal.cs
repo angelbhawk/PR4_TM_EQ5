@@ -26,11 +26,14 @@ namespace PR5_TM_EQ5.Forms
             {
                 pnlLmenu.Location = new Point(-250, 0);
                 pnlCcont.Location = new Point(0, 0);
+                pictureBox1.Location = new Point(853, 0);
+
             }
             else
             {
                 pnlLmenu.Location = new Point(0, 0);
                 pnlCcont.Location = new Point(250, 0);
+                pictureBox1.Location = new Point(603, 0);
             }
         }
 
