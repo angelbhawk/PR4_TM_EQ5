@@ -225,7 +225,7 @@ namespace PR5_TM_EQ5.Forms
                 }
                 if (Cont == pictureBox3 || Cont == label2 || Cont.Contains(label2))
                 {
-                    panel2.BackColor = Col2;
+                    panel2.BackColor = Col;
                     label2.BackColor = Col;
                     pictureBox3.BackColor = Col;
 
