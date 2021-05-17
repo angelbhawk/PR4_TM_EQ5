@@ -175,7 +175,7 @@ namespace PR5_TM_EQ5.Forms
 
             if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
             {
-                MessageBox.Show("<: " + e.ColumnIndex + " " + e.RowIndex);
+                //MessageBox.Show("<: " + e.ColumnIndex + " " + e.RowIndex);
 
                 if(e.ColumnIndex == 11) // Eliminar
                 {

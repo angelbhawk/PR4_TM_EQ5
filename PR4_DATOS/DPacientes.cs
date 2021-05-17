@@ -40,7 +40,7 @@ namespace PR4_DATOS
                 conx.Close();
             }
         }
-
+        #region AllCosas
         public List<EPacientes> AllPacientes()
         {
             List<EPacientes> Pacientes = new List<EPacientes>();
@@ -75,6 +75,228 @@ namespace PR4_DATOS
             }
             return Pacientes;
         }
+        //METODO BUSQUEDA POR COLONIA
+        public List<EPacientes> AllPacientesColonia(string Colonia)
+        {
+            List<EPacientes> Pacientes = new List<EPacientes>();
+            using (OleDbConnection conx = new OleDbConnection(Cnx))
+            {
+                conx.Open();
+                string sqlquery = "SELECT * FROM Paciente WHERE Colonia = @Col";
+                using (OleDbCommand cmd = new OleDbCommand(sqlquery, conx))
+                {
+                    cmd.Parameters.AddWithValue("@Col", Colonia);
+                    OleDbDataReader dtr = cmd.ExecuteReader();
+                    while (dtr.Read())
+                    {
+                        EPacientes Pacien = new EPacientes
+                        {
+                            rfc = Convert.ToString(dtr["RFC"]),
+                            nombre = Convert.ToString(dtr["Nombre"]),
+                            domicilio = Convert.ToString(dtr["Domicilio"]),
+                            colonia = Convert.ToString(dtr["Colonia"]),
+                            sexo = Convert.ToString(dtr["Sexo"]),
+                            enfermedad = Convert.ToString(dtr["Enfermedad"]),
+                            habitacion = Convert.ToString(dtr["Habitacion"]),
+                            tipoSangre = Convert.ToString(dtr["TipoDeSangre"]),
+                            colorOjos = Convert.ToString(dtr["ColorDeOjos"]),
+                            peso = Convert.ToInt32(dtr["Peso"]),
+                            fechaIngreso = Convert.ToDateTime(dtr["FechaDeIngreso"])
+                        };
+                        Pacientes.Add(Pacien);
+                    }
+                    cmd.Dispose();
+                }
+                conx.Close();
+            }
+            return Pacientes;
+        }
+
+        //BUSQUEDA POR SEXO
+        public List<EPacientes> AllPacientesSexo(string Sexo)
+        {
+            List<EPacientes> Pacientes = new List<EPacientes>();
+            using (OleDbConnection conx = new OleDbConnection(Cnx))
+            {
+                conx.Open();
+                string sqlquery = "SELECT * FROM Paciente WHERE Sexo = @Sexo";
+                using (OleDbCommand cmd = new OleDbCommand(sqlquery, conx))
+                {
+                    cmd.Parameters.AddWithValue("@Sexo", Sexo);
+                    OleDbDataReader dtr = cmd.ExecuteReader();
+                    while (dtr.Read())
+                    {
+                        EPacientes Pacien = new EPacientes
+                        {
+                            rfc = Convert.ToString(dtr["RFC"]),
+                            nombre = Convert.ToString(dtr["Nombre"]),
+                            domicilio = Convert.ToString(dtr["Domicilio"]),
+                            colonia = Convert.ToString(dtr["Colonia"]),
+                            sexo = Convert.ToString(dtr["Sexo"]),
+                            enfermedad = Convert.ToString(dtr["Enfermedad"]),
+                            habitacion = Convert.ToString(dtr["Habitacion"]),
+                            tipoSangre = Convert.ToString(dtr["TipoDeSangre"]),
+                            colorOjos = Convert.ToString(dtr["ColorDeOjos"]),
+                            peso = Convert.ToInt32(dtr["Peso"]),
+                            fechaIngreso = Convert.ToDateTime(dtr["FechaDeIngreso"])
+                        };
+                        Pacientes.Add(Pacien);
+                    }
+                    cmd.Dispose();
+                }
+                conx.Close();
+            }
+            return Pacientes;
+        }
+
+        //BUSQUEDA POR ENFERMEDAD
+        public List<EPacientes> AllPacientesEnfermedad(string Enfermedad)
+        {
+            List<EPacientes> Pacientes = new List<EPacientes>();
+            using (OleDbConnection conx = new OleDbConnection(Cnx))
+            {
+                conx.Open();
+                string sqlquery = "SELECT * FROM Paciente WHERE Enfermedad = @Enfermedad";
+                using (OleDbCommand cmd = new OleDbCommand(sqlquery, conx))
+                {
+                    cmd.Parameters.AddWithValue("@Enfer", Enfermedad);
+                    OleDbDataReader dtr = cmd.ExecuteReader();
+                    while (dtr.Read())
+                    {
+                        EPacientes Pacien = new EPacientes
+                        {
+                            rfc = Convert.ToString(dtr["RFC"]),
+                            nombre = Convert.ToString(dtr["Nombre"]),
+                            domicilio = Convert.ToString(dtr["Domicilio"]),
+                            colonia = Convert.ToString(dtr["Colonia"]),
+                            sexo = Convert.ToString(dtr["Sexo"]),
+                            enfermedad = Convert.ToString(dtr["Enfermedad"]),
+                            habitacion = Convert.ToString(dtr["Habitacion"]),
+                            tipoSangre = Convert.ToString(dtr["TipoDeSangre"]),
+                            colorOjos = Convert.ToString(dtr["ColorDeOjos"]),
+                            peso = Convert.ToInt32(dtr["Peso"]),
+                            fechaIngreso = Convert.ToDateTime(dtr["FechaDeIngreso"])
+                        };
+                        Pacientes.Add(Pacien);
+                    }
+                    cmd.Dispose();
+                }
+                conx.Close();
+            }
+            return Pacientes;
+        }
+
+        //BUSQUEDA POR TIPO DE SANGRE
+        public List<EPacientes> AllPacientesTipoSangre(string TipoSangre)
+        {
+            List<EPacientes> Pacientes = new List<EPacientes>();
+            using (OleDbConnection conx = new OleDbConnection(Cnx))
+            {
+                conx.Open();
+                string sqlquery = "SELECT * FROM Paciente WHERE TipoDeSangre = @TipoSan";
+                using (OleDbCommand cmd = new OleDbCommand(sqlquery, conx))
+                {
+                    cmd.Parameters.AddWithValue("@TipoSan", TipoSangre);
+                    OleDbDataReader dtr = cmd.ExecuteReader();
+                    while (dtr.Read())
+                    {
+                        EPacientes Pacien = new EPacientes
+                        {
+                            rfc = Convert.ToString(dtr["RFC"]),
+                            nombre = Convert.ToString(dtr["Nombre"]),
+                            domicilio = Convert.ToString(dtr["Domicilio"]),
+                            colonia = Convert.ToString(dtr["Colonia"]),
+                            sexo = Convert.ToString(dtr["Sexo"]),
+                            enfermedad = Convert.ToString(dtr["Enfermedad"]),
+                            habitacion = Convert.ToString(dtr["Habitacion"]),
+                            tipoSangre = Convert.ToString(dtr["TipoDeSangre"]),
+                            colorOjos = Convert.ToString(dtr["ColorDeOjos"]),
+                            peso = Convert.ToInt32(dtr["Peso"]),
+                            fechaIngreso = Convert.ToDateTime(dtr["FechaDeIngreso"])
+                        };
+                        Pacientes.Add(Pacien);
+                    }
+                    cmd.Dispose();
+                }
+                conx.Close();
+            }
+            return Pacientes;
+        }
+
+        //BUSQUEDA POR COLOR DE OJOS
+        public List<EPacientes> AllPacientesColorOjos(string ColorOjos)
+        {
+            List<EPacientes> Pacientes = new List<EPacientes>();
+            using (OleDbConnection conx = new OleDbConnection(Cnx))
+            {
+                conx.Open();
+                string sqlquery = "SELECT * FROM Paciente WHERE ColorDeOjos = @ColOjos";
+                using (OleDbCommand cmd = new OleDbCommand(sqlquery, conx))
+                {
+                    cmd.Parameters.AddWithValue("@ColOjos", ColorOjos);
+                    OleDbDataReader dtr = cmd.ExecuteReader();
+                    while (dtr.Read())
+                    {
+                        EPacientes Pacien = new EPacientes
+                        {
+                            rfc = Convert.ToString(dtr["RFC"]),
+                            nombre = Convert.ToString(dtr["Nombre"]),
+                            domicilio = Convert.ToString(dtr["Domicilio"]),
+                            colonia = Convert.ToString(dtr["Colonia"]),
+                            sexo = Convert.ToString(dtr["Sexo"]),
+                            enfermedad = Convert.ToString(dtr["Enfermedad"]),
+                            habitacion = Convert.ToString(dtr["Habitacion"]),
+                            tipoSangre = Convert.ToString(dtr["TipoDeSangre"]),
+                            colorOjos = Convert.ToString(dtr["ColorDeOjos"]),
+                            peso = Convert.ToInt32(dtr["Peso"]),
+                            fechaIngreso = Convert.ToDateTime(dtr["FechaDeIngreso"])
+                        };
+                        Pacientes.Add(Pacien);
+                    }
+                    cmd.Dispose();
+                }
+                conx.Close();
+            }
+            return Pacientes;
+        }
+
+        //BUSQUEDA POR FECHA DE INGRESO
+        public List<EPacientes> AllPacientesFechaIngreso(DateTime FechaIngreso)
+        {
+            List<EPacientes> Pacientes = new List<EPacientes>();
+            using (OleDbConnection conx = new OleDbConnection(Cnx))
+            {
+                conx.Open();
+                string sqlquery = "SELECT * FROM Paciente WHERE FechaDeIngreso = @FeIngre";
+                using (OleDbCommand cmd = new OleDbCommand(sqlquery, conx))
+                {
+                    cmd.Parameters.AddWithValue("@FeIngre", FechaIngreso);
+                    OleDbDataReader dtr = cmd.ExecuteReader();
+                    while (dtr.Read())
+                    {
+                        EPacientes Pacien = new EPacientes
+                        {
+                            rfc = Convert.ToString(dtr["RFC"]),
+                            nombre = Convert.ToString(dtr["Nombre"]),
+                            domicilio = Convert.ToString(dtr["Domicilio"]),
+                            colonia = Convert.ToString(dtr["Colonia"]),
+                            sexo = Convert.ToString(dtr["Sexo"]),
+                            enfermedad = Convert.ToString(dtr["Enfermedad"]),
+                            habitacion = Convert.ToString(dtr["Habitacion"]),
+                            tipoSangre = Convert.ToString(dtr["TipoDeSangre"]),
+                            colorOjos = Convert.ToString(dtr["ColorDeOjos"]),
+                            peso = Convert.ToInt32(dtr["Peso"]),
+                            fechaIngreso = Convert.ToDateTime(dtr["FechaDeIngreso"])
+                        };
+                        Pacientes.Add(Pacien);
+                    }
+                    cmd.Dispose();
+                }
+                conx.Close();
+            }
+            return Pacientes;
+        }
+        #endregion
 
         public EPacientes GetPacientes(string Rfc)
         {

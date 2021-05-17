@@ -92,5 +92,101 @@ namespace PR4_LOGICA
                 PacienDatos.UpdatePaciente(Pacien);
             }
         }
+
+        //ObtenerColonia
+        public List<EPacientes> ObtenerColonia(string Colonia)
+        {
+            Mensaje.Clear();
+            Mensaje.Clear();
+            if (Colonia == "")
+            {
+                Mensaje.Append("Por favor proporcionar una colonia existente");
+            }
+            if (Mensaje.Length == 0)
+            {
+                return PacienDatos.AllPacientesColonia(Colonia);
+            }
+            return null;
+        }
+
+        //ObtenerSexo
+        public List<EPacientes> ObtenerSexo(string Sexo)
+        {
+            Mensaje.Clear();
+            Mensaje.Clear();
+            if (Sexo == "")
+            {
+                Mensaje.Append("Por favor proporcionar una sexo existente");
+            }
+            if (Mensaje.Length == 0)
+            {
+                return PacienDatos.AllPacientesSexo(Sexo);
+            }
+            return null;
+        }
+
+        //ObtenerEnfermedad
+        public List<EPacientes> ObtenerEnfermedad(string Enfermedad)
+        {
+            Mensaje.Clear();
+            Mensaje.Clear();
+            if (Enfermedad == "")
+            {
+                Mensaje.Append("Por favor proporcionar una enfermedad existente");
+            }
+            if (Mensaje.Length == 0)
+            {
+                return PacienDatos.AllPacientesEnfermedad(Enfermedad);
+            }
+            return null;
+        }
+
+        //ObtenerTipoDeSangre
+        public List<EPacientes> ObtenerTipoDeSangre(string TipoSangre)
+        {
+            Mensaje.Clear();
+            Mensaje.Clear();
+            if (TipoSangre == "")
+            {
+                Mensaje.Append("Por favor proporcionar un tipo de sangre existente");
+            }
+            if (Mensaje.Length == 0)
+            {
+                return PacienDatos.AllPacientesTipoSangre(TipoSangre);
+            }
+            return null;
+        }
+
+        //ObtenerColorDEOjos
+        public List<EPacientes> ObtenerColorOjos(string ColorOjos)
+        {
+            Mensaje.Clear();
+            Mensaje.Clear();
+            if (ColorOjos == "")
+            {
+                Mensaje.Append("Por favor proporcionar un color de ojos existente");
+            }
+            if (Mensaje.Length == 0)
+            {
+                return PacienDatos.AllPacientesColorOjos(ColorOjos);
+            }
+            return null;
+        }
+
+        //ObtenerFechaIngreso
+        public List<EPacientes> ObtenerFechaIngreso(DateTime FechaIngreso)
+        {
+            Mensaje.Clear();
+            Mensaje.Clear();
+            if (FechaIngreso == null)
+            {
+                Mensaje.Append("Por favor proporcionar una fecha de ingreso existente");
+            }
+            if (Mensaje.Length == 0)
+            {
+                return PacienDatos.AllPacientesFechaIngreso(FechaIngreso);
+            }
+            return null;
+        }
     }
 }

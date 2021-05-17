@@ -131,5 +131,32 @@ namespace PR5_TM_EQ5.Forms
 
             }
         }
+        //controles azules
+        private void Boton_MouseEnter_Azul(object sender, EventArgs e)
+        {
+            Control Cont = sender as Control;
+            if (Cont != null)
+            {
+                Cont.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            }
+
+        }
+        private void Boton_MouseLeave_Azul(object sender, EventArgs e)
+        {
+            Control Cont = sender as Control;
+            if (Cont != null)
+            {
+                Cont.BackColor = System.Drawing.SystemColors.Highlight;
+            }
+        }
+
+        private void Boton_MouseDown_Azul(object sender, MouseEventArgs e)
+        {
+            Control Cont = sender as Control;
+            if (Cont != null)
+            {
+                Cont.BackColor = System.Drawing.SystemColors.HotTrack;
+            }
+        }
     }
 }

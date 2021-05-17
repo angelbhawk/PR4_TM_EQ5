@@ -91,5 +91,242 @@ namespace PR5_TM_EQ5.Forms
             myFCG.Close();
             //myFPP.Close();
         }
+        // controles negros
+        private void Boton_MouseEnter_Negro(object sender, EventArgs e)
+        {
+            Color Col= System.Drawing.Color.FromArgb(50, 50, 50);
+            Control Cont = sender as Control;
+            if (Cont != null)
+            {
+                Cont.BackColor = Col;
+
+                if (Cont == pictureBox5 || Cont == lblColonia || Cont.Contains(lblColonia))
+                {
+                    panel4.BackColor = Col;
+                    lblColonia.BackColor = Col;
+                    pictureBox5.BackColor = Col;
+
+                }
+                if (Cont == pictureBox7 || Cont == label4 || Cont.Contains(label4))
+                {
+                    panel5.BackColor = Col;
+                    label4.BackColor = Col;
+                    pictureBox7.BackColor = Col;
+
+                }
+                if (Cont == pictureBox9 || Cont == label5 || Cont.Contains(label5))
+                {
+                    panel6.BackColor = Col;
+                    label5.BackColor = Col;
+                    pictureBox9.BackColor = Col;
+
+                }
+                if (Cont == pictureBox11 || Cont == label6 || Cont.Contains(label6))
+                {
+                    panel7.BackColor = Col;
+                    label6.BackColor = Col;
+                    pictureBox11.BackColor = Col;
+
+                }
+                if (Cont == pictureBox4 || Cont == label7 || Cont.Contains(label7))
+                {
+                    panel8.BackColor = Col;
+                    label7.BackColor = Col;
+                    pictureBox4.BackColor = Col;
+
+                }
+                if (Cont == pictureBox6 || Cont == label8 || Cont.Contains(label8))
+                {
+                    panel9.BackColor = Col;
+                    label8.BackColor = Col;
+                    pictureBox6.BackColor = Col;
+
+                }
+                if (Cont == pictureBox8 || Cont == lblRegistro || Cont.Contains(lblRegistro))
+                {
+                    panel10.BackColor = Col;
+                    lblRegistro.BackColor = Col;
+                    pictureBox8.BackColor = Col;
+
+                }
+
+
+            }
+
+        }
+        private void Boton_MouseLeave_Negro(object sender, EventArgs e)
+        {
+            Color Col = System.Drawing.Color.FromArgb(21, 21, 21);
+            Color Col2 = System.Drawing.Color.FromArgb(16,16,16);
+            Control Cont = sender as Control;
+            if (Cont != null)
+            {
+                Cont.BackColor = Cont.BackColor = System.Drawing.Color.FromArgb(16, 16, 16);
+                if (Cont == pictureBox5 || Cont == lblColonia || Cont.Contains(lblColonia))
+                {
+                    panel4.BackColor  = System.Drawing.Color.FromArgb(16, 16, 16);
+                    lblColonia.BackColor  = System.Drawing.Color.FromArgb(21, 21, 21);
+                    pictureBox5.BackColor = System.Drawing.Color.FromArgb(21, 21, 21);
+
+                }
+                if (Cont == pictureBox7 || Cont == label4 || Cont.Contains(label4))
+                {
+                    panel5.BackColor = Col2;
+                    label4.BackColor = Col;
+                    pictureBox7.BackColor = Col;
+
+                }
+
+                if (Cont == pictureBox9 || Cont == label5 || Cont.Contains(label5))
+                {
+                    panel6.BackColor = Col2;
+                    label5.BackColor = Col;
+                    pictureBox9.BackColor = Col;
+
+                }
+                if (Cont == pictureBox11 || Cont == label6 || Cont.Contains(label6))
+                {
+                    panel7.BackColor = Col2;
+                    label6.BackColor = Col;
+                    pictureBox11.BackColor = Col;
+
+                }
+                if (Cont == pictureBox4 || Cont == label7 || Cont.Contains(label7))
+                {
+                    panel8.BackColor = Col2;
+                    label7.BackColor = Col;
+                    pictureBox4.BackColor = Col;
+
+                }
+                if (Cont == pictureBox6 || Cont == label8 || Cont.Contains(label8))
+                {
+                    panel9.BackColor = Col2;
+                    label8.BackColor = Col;
+                    pictureBox6.BackColor = Col;
+
+                }
+                if (Cont == pictureBox8 || Cont == lblRegistro || Cont.Contains(lblRegistro))
+                {
+                    panel10.BackColor = Col2;
+                    lblRegistro.BackColor = Col;
+                    pictureBox8.BackColor = Col;
+
+                }
+            }
+        }
+
+        private void Boton_MouseDown_Negro(object sender, MouseEventArgs e)
+        {
+            Color Col = System.Drawing.Color.FromArgb(80, 80, 80);
+            Control Cont = sender as Control;
+            if (Cont != null)
+            {
+                Cont.BackColor = System.Drawing.Color.FromArgb(80, 80, 80);
+                if (Cont == pictureBox5 || Cont == lblColonia || Cont.Contains(lblColonia))
+                {
+                    panel4.BackColor = System.Drawing.Color.FromArgb(80, 80, 80);
+                    lblColonia.BackColor = System.Drawing.Color.FromArgb(80, 80, 80);
+                    pictureBox5.BackColor  = System.Drawing.Color.FromArgb(80, 80, 80);
+
+                }
+                if (Cont == pictureBox7 || Cont == label4 || Cont.Contains(label4))
+                {
+                    panel5.BackColor = System.Drawing.Color.FromArgb(80, 80, 80);
+                    label4.BackColor = System.Drawing.Color.FromArgb(80, 80, 80);
+                    pictureBox7.BackColor = System.Drawing.Color.FromArgb(80, 80, 80);
+
+                }
+                if (Cont == pictureBox9 || Cont == label5 || Cont.Contains(label5))
+                {
+                    panel6.BackColor = Col;
+                    label5.BackColor = Col;
+                    pictureBox9.BackColor = Col;
+
+                }
+                if (Cont == pictureBox11 || Cont == label6 || Cont.Contains(label6))
+                {
+                    panel7.BackColor = Col;
+                    label6.BackColor = Col;
+                    pictureBox11.BackColor = Col;
+
+                }
+                if (Cont == pictureBox4 || Cont == label7 || Cont.Contains(label7))
+                {
+                    panel8.BackColor = Col;
+                    label7.BackColor = Col;
+                    pictureBox4.BackColor = Col;
+
+                }
+                if (Cont == pictureBox6 || Cont == label8 || Cont.Contains(label8))
+                {
+                    panel9.BackColor = Col;
+                    label8.BackColor = Col;
+                    pictureBox6.BackColor = Col;
+
+                }
+                if (Cont == pictureBox8 || Cont == lblRegistro || Cont.Contains(lblRegistro))
+                {
+                    panel10.BackColor = Col;
+                    lblRegistro.BackColor = Col;
+                    pictureBox8.BackColor = Col;
+
+                }
+            }
+        }
+        //controles azules
+        private void Boton_MouseEnter_Azul(object sender, EventArgs e)
+        {
+            Control Cont = sender as Control;
+            if (Cont != null)
+            {
+                Cont.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+                if (Cont.Contains(pbxMenu))
+                {
+                    pbxMenu.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+                }
+                if (Cont == pbxMenu)
+                {
+                    panel11.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+                }
+
+
+            }
+            
+        }
+        private void Boton_MouseLeave_Azul(object sender, EventArgs e)
+        {
+            Control Cont = sender as Control;
+            if (Cont != null)
+            {
+                Cont.BackColor = System.Drawing.SystemColors.Highlight;
+                if (Cont.Contains(pbxMenu))
+                {
+                    pbxMenu.BackColor = System.Drawing.SystemColors.Highlight;
+                }
+                if (Cont == pbxMenu)
+                {
+                    panel11.BackColor = System.Drawing.SystemColors.Highlight;
+                }
+
+            }
+        }
+
+        private void Boton_MouseDown_Azul(object sender, MouseEventArgs e)
+        {
+            Control Cont = sender as Control;
+            if (Cont != null)
+            {
+                Cont.BackColor = System.Drawing.Color.CornflowerBlue;
+                if (Cont.Contains(pbxMenu))
+                {
+                    pbxMenu.BackColor = System.Drawing.Color.CornflowerBlue;
+                }
+                if (Cont == pbxMenu)
+                {
+                    panel11.BackColor = System.Drawing.Color.CornflowerBlue;
+                }
+
+            }
+        }
     }
 }
