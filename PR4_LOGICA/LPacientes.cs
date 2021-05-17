@@ -85,7 +85,7 @@ namespace PR4_LOGICA
             }
         }
 
-        public void ModificarAlumnos(EPacientes Pacien)
+        public void ModificarPacientes(EPacientes Pacien)
         {
             if (ValidarPaciente(Pacien))
             {
