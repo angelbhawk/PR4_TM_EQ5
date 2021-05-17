@@ -43,15 +43,15 @@ namespace PR5_TM_EQ5.Forms
             {
                 Pacientes = new EPacientes
                 {
-                    rfc = tbxRFC.Text, //1 string
-                    nombre = tbxNombre.Text, // 2 string
-                    domicilio = tbxDomicilio.Text, // 3 string
-                    colonia = cbxColonia.SelectedItem.ToString(), // 4 string item
-                    sexo = cbxSexo.SelectedItem.ToString(), // 5 string item
-                    enfermedad = cbxEnfermedad.SelectedItem.ToString(), // 6 string item
-                    habitacion = tbxHabitacion.Text, // 7 string
-                    tipoSangre = cbxTipoSangre.SelectedItem.ToString(), // 8 string item
-                    colorOjos = cbxColorOjos.SelectedItem.ToString(), // 9 string item
+                    rfc = tbxRFC.Text.ToUpper(), //1 string
+                    nombre = tbxNombre.Text.ToUpper(), // 2 string
+                    domicilio = tbxDomicilio.Text.ToUpper(), // 3 string
+                    colonia = cbxColonia.SelectedItem.ToString().ToUpper(), // 4 string item
+                    sexo = cbxSexo.SelectedItem.ToString().ToUpper(), // 5 string item
+                    enfermedad = cbxEnfermedad.SelectedItem.ToString().ToUpper(), // 6 string item
+                    habitacion = tbxHabitacion.Text.ToUpper(), // 7 string
+                    tipoSangre = cbxTipoSangre.SelectedItem.ToString().ToUpper(), // 8 string item
+                    colorOjos = cbxColorOjos.SelectedItem.ToString().ToUpper(), // 9 string item
                     peso = Convert.ToInt32(tbxPeso.Text), // 10 int
                     fechaIngreso = dtpFechaIngreso.Value // 11 date
                 };
@@ -76,17 +76,17 @@ namespace PR5_TM_EQ5.Forms
         {
             Pacientes = new EPacientes
             {
-                rfc = tbxRFC.Text,
-                nombre = tbxNombre.Text,
-                domicilio = tbxDomicilio.Text,
-                colonia = cbxColonia.SelectedItem.ToString(),
-                sexo = cbxSexo.SelectedItem.ToString(),
-                enfermedad = cbxEnfermedad.SelectedItem.ToString(),
-                habitacion = tbxHabitacion.Text,
-                tipoSangre = cbxTipoSangre.SelectedItem.ToString(),
-                colorOjos = cbxColorOjos.SelectedItem.ToString(),
+                rfc = tbxRFC.Text.ToUpper(),
+                nombre = tbxNombre.Text.ToUpper(),
+                domicilio = tbxDomicilio.Text.ToUpper(),
+                colonia = cbxColonia.SelectedItem.ToString().ToUpper(),
+                sexo = cbxSexo.SelectedItem.ToString().ToUpper(),
+                enfermedad = cbxEnfermedad.SelectedItem.ToString().ToUpper(),
+                habitacion = tbxHabitacion.Text.ToUpper(),
+                tipoSangre = cbxTipoSangre.SelectedItem.ToString().ToUpper(),
+                colorOjos = cbxColorOjos.SelectedItem.ToString().ToUpper(),
                 peso = Convert.ToInt32(tbxPeso.Text),
-                fechaIngreso = dtpFechaIngreso.Value
+                fechaIngreso = dtpFechaIngreso.Value.Date
             };
             LogPacientes.ModificarPacientes(Pacientes);
             if (LogPacientes.Mensaje.Length != 0)

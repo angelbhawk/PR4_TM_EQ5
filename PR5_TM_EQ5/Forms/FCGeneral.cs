@@ -50,7 +50,7 @@ namespace PR5_TM_EQ5.Forms
                     DgvDatos[7, ren].Value =  Pa.tipoSangre;
                     DgvDatos[8, ren].Value =  Pa.colorOjos;
                     DgvDatos[9, ren].Value =  Pa.peso;
-                    DgvDatos[10, ren].Value = Pa.fechaIngreso;
+                    DgvDatos[10, ren].Value = Pa.fechaIngreso.ToShortDateString();
                     ren++;
                 }
             }
@@ -126,33 +126,21 @@ namespace PR5_TM_EQ5.Forms
                         break;
 
                     case "Por color de ojos":
-
                         Opciones = new string[6];
-                        Opciones[0] = "ORH+";
-                        Opciones[1] = "BRH+";
-                        Opciones[2] = "BRH-";
-                        Opciones[3] = "ARH+";
-                        Opciones[4] = "ARH-";
-                        Opciones[5] = "ABRH+";
-                        cbxOpciones.Text = "ORH+";
+                        Opciones[0] = "AZUL";
+                        Opciones[1] = "VERDES";
+                        Opciones[2] = "CAFÉS OSCURO";
+                        Opciones[3] = "CAFÉS CLARO";
+                        Opciones[4] = "GRISES";
+                        Opciones[5] = "NEGROS";
+                        cbxOpciones.Text = "AZUL";
 
                         MostrarParametros();
                         break;
 
-                    case "Por peso":
-
-                        Opciones = new string[8];
-                        Opciones[0] = "MENOS DE 20";
-                        Opciones[1] = "ENTRE 20 Y 30";
-                        Opciones[2] = "ENTRE 30 Y 40";
-                        Opciones[3] = "ENTRE 40 Y 50";
-                        Opciones[4] = "ENTRE 50 Y 60";
-                        Opciones[5] = "ENTRE 60 Y 70";
-                        Opciones[6] = "ENTRE 70 Y 80";
-                        Opciones[7] = "MAS DE 80";
-                        cbxOpciones.Text = "MENOS DE 20";
-
-                        MostrarParametros();
+                    case "Por fecha de registro":
+                        fecha.Visible = true;
+                        cbxOpciones.Visible = false;
                         break;
 
                     default:
@@ -177,8 +165,6 @@ namespace PR5_TM_EQ5.Forms
 
             if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
             {
-                //MessageBox.Show("<: " + e.ColumnIndex + " " + e.RowIndex);
-
                 if(e.ColumnIndex == 11) // Eliminar
                 {
                     int col = e.RowIndex;
@@ -214,88 +200,165 @@ namespace PR5_TM_EQ5.Forms
         public void ConsultaIndividual(string Categoria)
         {
             string Busqueda = cbxOpciones.Text;
-            ConsultaGeneral();
+            int ren = 0;
             switch (Categoria)
             {
                 case "Por colonia":
-                    int a = 0;
-                    int i = 0;
-                    //int b = 0;
-                    while (i < DgvDatos.RowCount)
+                    List<EPacientes> ListColonia = LogPacientes.ObtenerColonia(Busqueda);
+                    if (ListColonia.Count > 0)
                     {
-                        if (Convert.ToString(DgvDatos[3, i].Value) == Busqueda)
+                        DgvDatos.RowCount = ListColonia.Count;
+                        foreach (EPacientes Pa in ListColonia)
                         {
-                            DgvDatos[3, a].Value = DgvDatos[3, i].Value;
-                            DgvDatos[0, a].Value = DgvDatos[0, i].Value;
-                            DgvDatos[1, a].Value = DgvDatos[1, i].Value;
-                            DgvDatos[2, a].Value = DgvDatos[2, i].Value;
-                            DgvDatos[4, a].Value = DgvDatos[4, i].Value;
-                            DgvDatos[5, a].Value = DgvDatos[5, i].Value;
-                            DgvDatos[6, a].Value = DgvDatos[6, i].Value;
-                            DgvDatos[7, a].Value = DgvDatos[7, i].Value;
-                            DgvDatos[8, a].Value = DgvDatos[8, i].Value;
-                            DgvDatos[9, a].Value = DgvDatos[9, i].Value;
-                            DgvDatos[10, a].Value = DgvDatos[10, i].Value;
-                            a++;
+                            DgvDatos[0, ren].Value = Pa.rfc;
+                            DgvDatos[1, ren].Value = Pa.nombre;
+                            DgvDatos[2, ren].Value = Pa.domicilio;
+                            DgvDatos[3, ren].Value = Pa.colonia;
+                            DgvDatos[4, ren].Value = Pa.sexo;
+                            DgvDatos[5, ren].Value = Pa.enfermedad;
+                            DgvDatos[6, ren].Value = Pa.habitacion;
+                            DgvDatos[7, ren].Value = Pa.tipoSangre;
+                            DgvDatos[8, ren].Value = Pa.colorOjos;
+                            DgvDatos[9, ren].Value = Pa.peso;
+                            DgvDatos[10, ren].Value = Pa.fechaIngreso.ToShortDateString();
+                            ren++;
                         }
-                        else
-                        {
-                            DgvDatos.Rows.RemoveAt(i);
-                            i = 0;
-                        }
-                        i++;
-
                     }
+                    else
+                        MessageBox.Show("No hay pacientes registrados actualente");
+
                     break;
 
                 case "Por sexo":
-        
+                    List<EPacientes> ListSexo = LogPacientes.ObtenerSexo(Busqueda);
+                    if (ListSexo.Count > 0)
+                    {
+                        DgvDatos.RowCount = ListSexo.Count;
+                        foreach (EPacientes Pa in ListSexo)
+                        {
+                            DgvDatos[0, ren].Value = Pa.rfc;
+                            DgvDatos[1, ren].Value = Pa.nombre;
+                            DgvDatos[2, ren].Value = Pa.domicilio;
+                            DgvDatos[3, ren].Value = Pa.colonia;
+                            DgvDatos[4, ren].Value = Pa.sexo;
+                            DgvDatos[5, ren].Value = Pa.enfermedad;
+                            DgvDatos[6, ren].Value = Pa.habitacion;
+                            DgvDatos[7, ren].Value = Pa.tipoSangre;
+                            DgvDatos[8, ren].Value = Pa.colorOjos;
+                            DgvDatos[9, ren].Value = Pa.peso;
+                            DgvDatos[10, ren].Value = Pa.fechaIngreso.ToShortDateString();
+                            ren++;
+                        }
+                    }
+                    else
+                        MessageBox.Show("No hay pacientes registrados actualente");
                     break;
 
                 case "Por enfermedad":
-
+                    List<EPacientes> ListEnfermedad = LogPacientes.ObtenerEnfermedad(Busqueda);
+                    if (ListEnfermedad.Count > 0)
+                    {
+                        DgvDatos.RowCount = ListEnfermedad.Count;
+                        foreach (EPacientes Pa in ListEnfermedad)
+                        {
+                            DgvDatos[0, ren].Value = Pa.rfc;
+                            DgvDatos[1, ren].Value = Pa.nombre;
+                            DgvDatos[2, ren].Value = Pa.domicilio;
+                            DgvDatos[3, ren].Value = Pa.colonia;
+                            DgvDatos[4, ren].Value = Pa.sexo;
+                            DgvDatos[5, ren].Value = Pa.enfermedad;
+                            DgvDatos[6, ren].Value = Pa.habitacion;
+                            DgvDatos[7, ren].Value = Pa.tipoSangre;
+                            DgvDatos[8, ren].Value = Pa.colorOjos;
+                            DgvDatos[9, ren].Value = Pa.peso;
+                            DgvDatos[10, ren].Value = Pa.fechaIngreso.ToShortDateString();
+                            ren++;
+                        }
+                    }
+                    else
+                        MessageBox.Show("No hay pacientes registrados actualente");
                     break;
 
                 case "Por tipo de sangre":
-
+                    List<EPacientes> ListTipoSangre= LogPacientes.ObtenerTipoDeSangre(Busqueda);
+                    if (ListTipoSangre.Count > 0)
+                    {
+                        DgvDatos.RowCount = ListTipoSangre.Count;
+                        foreach (EPacientes Pa in ListTipoSangre)
+                        {
+                            DgvDatos[0, ren].Value = Pa.rfc;
+                            DgvDatos[1, ren].Value = Pa.nombre;
+                            DgvDatos[2, ren].Value = Pa.domicilio;
+                            DgvDatos[3, ren].Value = Pa.colonia;
+                            DgvDatos[4, ren].Value = Pa.sexo;
+                            DgvDatos[5, ren].Value = Pa.enfermedad;
+                            DgvDatos[6, ren].Value = Pa.habitacion;
+                            DgvDatos[7, ren].Value = Pa.tipoSangre;
+                            DgvDatos[8, ren].Value = Pa.colorOjos;
+                            DgvDatos[9, ren].Value = Pa.peso;
+                            DgvDatos[10, ren].Value = Pa.fechaIngreso.ToShortDateString();
+                            ren++;
+                        }
+                    }
+                    else
+                        MessageBox.Show("No hay pacientes registrados actualente");
                     break;
 
                 case "Por color de ojos":
-
+                    List<EPacientes> ListColOjos = LogPacientes.ObtenerColorOjos(Busqueda);
+                    if (ListColOjos.Count > 0)
+                    {
+                        DgvDatos.RowCount = ListColOjos.Count;
+                        foreach (EPacientes Pa in ListColOjos)
+                        {
+                            DgvDatos[0, ren].Value = Pa.rfc;
+                            DgvDatos[1, ren].Value = Pa.nombre;
+                            DgvDatos[2, ren].Value = Pa.domicilio;
+                            DgvDatos[3, ren].Value = Pa.colonia;
+                            DgvDatos[4, ren].Value = Pa.sexo;
+                            DgvDatos[5, ren].Value = Pa.enfermedad;
+                            DgvDatos[6, ren].Value = Pa.habitacion;
+                            DgvDatos[7, ren].Value = Pa.tipoSangre;
+                            DgvDatos[8, ren].Value = Pa.colorOjos;
+                            DgvDatos[9, ren].Value = Pa.peso;
+                            DgvDatos[10, ren].Value = Pa.fechaIngreso.ToShortDateString();
+                            ren++;
+                        }
+                    }
+                    else
+                        MessageBox.Show("No hay pacientes registrados actualente");
                     break;
 
-                case "Por peso":
+                case "Por fecha de registro":
+                    List<EPacientes> ListFechaRegistro = LogPacientes.ObtenerFechaIngreso(fecha.Value.Date);
+                    if (ListFechaRegistro.Count > 0)
+                    {
+                        DgvDatos.RowCount = ListFechaRegistro.Count;
+                        foreach (EPacientes Pa in ListFechaRegistro)
+                        {
+                            DgvDatos[0, ren].Value = Pa.rfc;
+                            DgvDatos[1, ren].Value = Pa.nombre;
+                            DgvDatos[2, ren].Value = Pa.domicilio;
+                            DgvDatos[3, ren].Value = Pa.colonia;
+                            DgvDatos[4, ren].Value = Pa.sexo;
+                            DgvDatos[5, ren].Value = Pa.enfermedad;
+                            DgvDatos[6, ren].Value = Pa.habitacion;
+                            DgvDatos[7, ren].Value = Pa.tipoSangre;
+                            DgvDatos[8, ren].Value = Pa.colorOjos;
+                            DgvDatos[9, ren].Value = Pa.peso;
+                            DgvDatos[10, ren].Value = Pa.fechaIngreso.ToShortDateString();
+                            ren++;
+                        }
+                    }
+                    else
+                        MessageBox.Show("No hay pacientes registrados actualente");
 
-                   
                     break;
 
                 default:
 
                     break;
             }
-            /*
-            if (ListPaciente.Count > 0)
-            {
-                DgvDatos.RowCount = ListPaciente.Count;
-                foreach (EPacientes Pa in ListPaciente)
-                {
-                    DgvDatos[0, ren].Value = Pa.rfc;
-                    DgvDatos[1, ren].Value = Pa.nombre;
-                    DgvDatos[2, ren].Value = Pa.domicilio;
-                    DgvDatos[3, ren].Value = Pa.colonia;
-                    DgvDatos[4, ren].Value = Pa.sexo;
-                    DgvDatos[5, ren].Value = Pa.enfermedad;
-                    DgvDatos[6, ren].Value = Pa.habitacion;
-                    DgvDatos[7, ren].Value = Pa.tipoSangre;
-                    DgvDatos[8, ren].Value = Pa.colorOjos;
-                    DgvDatos[9, ren].Value = Pa.peso;
-                    DgvDatos[10, ren].Value = Pa.fechaIngreso;
-                    ren++;
-                }
-            }
-            else
-                MessageBox.Show("No hay pacientes registrados actualente");
-            */
         }
 
         private void button1_Click(object sender, EventArgs e)
