@@ -138,7 +138,7 @@ namespace PR5_TM_EQ5
                         peso = (int)peso.Value,
                         fechaIngreso = fechaIngreso.Value
                     };
-                    LogPacientes.ModificarAlumnos(Pacientes);
+                    LogPacientes.ModificarPacientes(Pacientes);
                     if (LogPacientes.Mensaje.Length != 0)
                         MessageBox.Show(LogPacientes.Mensaje.ToString());
                     else

@@ -88,7 +88,7 @@ namespace PR5_TM_EQ5.Forms
                 peso = Convert.ToInt32(tbxPeso.Text),
                 fechaIngreso = dtpFechaIngreso.Value
             };
-            LogPacientes.ModificarAlumnos(Pacientes);
+            LogPacientes.ModificarPacientes(Pacientes);
             if (LogPacientes.Mensaje.Length != 0)
                 MessageBox.Show(LogPacientes.Mensaje.ToString());
             else
