@@ -586,9 +586,10 @@ namespace PR5_TM_EQ5.Forms
             this.Controls.Add(this.pnlCcont);
             this.Controls.Add(this.pnlLmenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FPrincipal";
+            this.Text = "Hospital General";
             this.Load += new System.EventHandler(this.FPrincipal_Load);
             this.pnlLmenu.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
