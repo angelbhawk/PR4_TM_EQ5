@@ -215,37 +215,37 @@ namespace PR5_TM_EQ5.Forms
         {
             string Busqueda = cbxOpciones.Text;
             ConsultaGeneral();
-            int ren = 0;
-            List<EPacientes> ListPaciente = LogPacientes.ListaPacientes();
             switch (Categoria)
             {
                 case "Por colonia":
                     int a = 0;
-                    if (DgvDatos.RowCount > 0)
+                    int i = 0;
+                    //int b = 0;
+                    while (i < DgvDatos.RowCount)
                     {
-                        for (int i=0; i<DgvDatos.RowCount;i++)
+                        if (Convert.ToString(DgvDatos[3, i].Value) == Busqueda)
                         {
-                            if (Convert.ToString(DgvDatos[3, i].Value) == Busqueda)
-                            {
-                                DgvDatos[3, a].Value = DgvDatos[3, i].Value;
-                                DgvDatos[0, a].Value = DgvDatos[0, i].Value;
-                                DgvDatos[1, a].Value = DgvDatos[1, i].Value;
-                                DgvDatos[2, a].Value = DgvDatos[2, i].Value;
-                                DgvDatos[4, a].Value = DgvDatos[4, i].Value;
-                                DgvDatos[5, a].Value = DgvDatos[5, i].Value;
-                                DgvDatos[6, a].Value = DgvDatos[6, i].Value;
-                                DgvDatos[7, a].Value = DgvDatos[7, i].Value;
-                                DgvDatos[8, a].Value = DgvDatos[8, i].Value;
-                                DgvDatos[9, a].Value = DgvDatos[9, i].Value;
-                                DgvDatos[10, a].Value = DgvDatos[10, i].Value;
-                                a++;
-                            }
-                            //DgvDatos[]
-                            
+                            DgvDatos[3, a].Value = DgvDatos[3, i].Value;
+                            DgvDatos[0, a].Value = DgvDatos[0, i].Value;
+                            DgvDatos[1, a].Value = DgvDatos[1, i].Value;
+                            DgvDatos[2, a].Value = DgvDatos[2, i].Value;
+                            DgvDatos[4, a].Value = DgvDatos[4, i].Value;
+                            DgvDatos[5, a].Value = DgvDatos[5, i].Value;
+                            DgvDatos[6, a].Value = DgvDatos[6, i].Value;
+                            DgvDatos[7, a].Value = DgvDatos[7, i].Value;
+                            DgvDatos[8, a].Value = DgvDatos[8, i].Value;
+                            DgvDatos[9, a].Value = DgvDatos[9, i].Value;
+                            DgvDatos[10, a].Value = DgvDatos[10, i].Value;
+                            a++;
                         }
+                        else
+                        {
+                            DgvDatos.Rows.RemoveAt(i);
+                            i = 0;
+                        }
+                        i++;
+
                     }
-                    else
-                        MessageBox.Show("No hay pacientes registrados actualente");
                     break;
 
                 case "Por sexo":
