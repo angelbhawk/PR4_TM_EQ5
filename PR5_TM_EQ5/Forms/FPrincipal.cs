@@ -328,5 +328,10 @@ namespace PR5_TM_EQ5.Forms
 
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

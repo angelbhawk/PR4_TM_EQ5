@@ -30,10 +30,6 @@ namespace PR5_TM_EQ5.Forms
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FPrincipal));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.pbxMenu = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.pnlLmenu = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
@@ -66,9 +62,11 @@ namespace PR5_TM_EQ5.Forms
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnlCcont = new System.Windows.Forms.Panel();
             this.pnlCForm = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
-            this.panel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxMenu)).BeginInit();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.pbxMenu = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pnlLmenu.SuspendLayout();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -90,62 +88,11 @@ namespace PR5_TM_EQ5.Forms
             this.pnlLsup.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnlCcont.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxMenu)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
-            this.panel1.Controls.Add(this.panel11);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1200, 43);
-            this.panel1.TabIndex = 0;
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.SystemColors.Highlight;
-            this.panel11.Controls.Add(this.pbxMenu);
-            this.panel11.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.panel11.Location = new System.Drawing.Point(0, 0);
-            this.panel11.Margin = new System.Windows.Forms.Padding(4);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(47, 43);
-            this.panel11.TabIndex = 2;
-            this.panel11.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Boton_MouseDown_Azul);
-            this.panel11.MouseEnter += new System.EventHandler(this.Boton_MouseEnter_Azul);
-            this.panel11.MouseLeave += new System.EventHandler(this.Boton_MouseLeave_Azul);
-            // 
-            // pbxMenu
-            // 
-            this.pbxMenu.BackColor = System.Drawing.SystemColors.Highlight;
-            this.pbxMenu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxMenu.Image = ((System.Drawing.Image)(resources.GetObject("pbxMenu.Image")));
-            this.pbxMenu.Location = new System.Drawing.Point(9, 9);
-            this.pbxMenu.Margin = new System.Windows.Forms.Padding(4);
-            this.pbxMenu.Name = "pbxMenu";
-            this.pbxMenu.Size = new System.Drawing.Size(27, 25);
-            this.pbxMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbxMenu.TabIndex = 0;
-            this.pbxMenu.TabStop = false;
-            this.pbxMenu.Click += new System.EventHandler(this.pbxMenu_Click);
-            this.pbxMenu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Boton_MouseDown_Azul);
-            this.pbxMenu.MouseEnter += new System.EventHandler(this.Boton_MouseEnter_Azul);
-            this.pbxMenu.MouseLeave += new System.EventHandler(this.Boton_MouseLeave_Azul);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(55, 7);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(242, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Hospital General de La Paz";
             // 
             // pnlLmenu
             // 
@@ -589,6 +536,76 @@ namespace PR5_TM_EQ5.Forms
             this.pnlCForm.Size = new System.Drawing.Size(1200, 597);
             this.pnlCForm.TabIndex = 1;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(55, 7);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(242, 20);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Hospital General de La Paz";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(804, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(64, 45);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel11.Controls.Add(this.pbxMenu);
+            this.panel11.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.panel11.Location = new System.Drawing.Point(0, 0);
+            this.panel11.Margin = new System.Windows.Forms.Padding(4);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(47, 43);
+            this.panel11.TabIndex = 2;
+            this.panel11.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Boton_MouseDown_Azul);
+            this.panel11.MouseEnter += new System.EventHandler(this.Boton_MouseEnter_Azul);
+            this.panel11.MouseLeave += new System.EventHandler(this.Boton_MouseLeave_Azul);
+            // 
+            // pbxMenu
+            // 
+            this.pbxMenu.BackColor = System.Drawing.SystemColors.Highlight;
+            this.pbxMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbxMenu.Image = ((System.Drawing.Image)(resources.GetObject("pbxMenu.Image")));
+            this.pbxMenu.Location = new System.Drawing.Point(9, 9);
+            this.pbxMenu.Margin = new System.Windows.Forms.Padding(4);
+            this.pbxMenu.Name = "pbxMenu";
+            this.pbxMenu.Size = new System.Drawing.Size(27, 25);
+            this.pbxMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxMenu.TabIndex = 0;
+            this.pbxMenu.TabStop = false;
+            this.pbxMenu.Click += new System.EventHandler(this.pbxMenu_Click);
+            this.pbxMenu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Boton_MouseDown_Azul);
+            this.pbxMenu.MouseEnter += new System.EventHandler(this.Boton_MouseEnter_Azul);
+            this.pbxMenu.MouseLeave += new System.EventHandler(this.Boton_MouseLeave_Azul);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
+            this.panel1.Controls.Add(this.panel11);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1200, 43);
+            this.panel1.TabIndex = 0;
+            // 
             // FPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -602,10 +619,6 @@ namespace PR5_TM_EQ5.Forms
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FPrincipal";
             this.Load += new System.EventHandler(this.FPrincipal_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel11.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbxMenu)).EndInit();
             this.pnlLmenu.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
@@ -636,16 +649,18 @@ namespace PR5_TM_EQ5.Forms
             this.pnlLsup.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnlCcont.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel11.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbxMenu)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnlLmenu;
         private System.Windows.Forms.Panel pnlCcont;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnlLsup;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
@@ -675,8 +690,11 @@ namespace PR5_TM_EQ5.Forms
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Label lblRegistro;
-        private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel pnlCForm;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.PictureBox pbxMenu;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
     }
 }

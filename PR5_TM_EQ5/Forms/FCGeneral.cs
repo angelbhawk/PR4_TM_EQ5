@@ -209,5 +209,11 @@ namespace PR5_TM_EQ5.Forms
 
             }
         }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string Busqueda = cbxOpciones.Text;
+
+
+        }
     }
 }
